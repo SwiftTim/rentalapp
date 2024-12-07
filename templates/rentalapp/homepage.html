@@ -1,0 +1,85 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental App - Home</title>
+    <!-- Link to the static CSS file -->
+    <link rel="stylesheet" href="{% static 'rentalapp/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth; /* Enable smooth scrolling */
+        }
+    </style>
+</head>
+<body class="ma">
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <h1 class="heartbeatSlow">RentalApp</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="{% url 'homepage' %}">Home</a></li>
+                    <li><a href="{% url 'property_list' %}">Properties</a></li>
+                    <li><a href="#about-us">About Us</a></li> <!-- Updated Link -->
+                    <li><a href="{% url 'services' %}">Services</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Body Section -->
+    <main class="main-section">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h2>Find Your Dream Rental</h2>
+            <p>Browse our selection of houses and apartments available for rent.</p>
+            <form method="GET" action="{% url 'homepage' %}">
+                <input type="text" name="search" placeholder="Search by location..." class="search-box" value="{{ request.GET.search }}">
+                <button type="submit" class="search-btn">Search</button>
+            </form>
+        </section>
+
+        <!-- Featured Properties Section -->
+        <section class="featured-properties">
+            <h2>Featured Properties</h2>
+            <div class="property-cards">
+                {% for property in properties %}
+                    <div class="property-card">
+                        <img src="{{ property.image.url }}" alt="{{ property.title }}">
+                        <h3>{{ property.title }}</h3>
+                        <p>Location: {{ property.location }}</p>
+                        <p>Price: Ksh{{ property.price }}/month</p>
+                        <a href="{% url 'property_detail' property.id %}">
+                            <button class="details-btn">View Details</button>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section (About Us Section with an ID) -->
+    <footer class="footer" id="about-us"> <!-- Added id here -->
+        <div class="footer-content">
+            <p>Connect with us on social media:</p>
+            <div class="social-links">
+                <a href="https://twitter.com" target="_blank" class="social-link">
+                    <i class="fa-brands fa-x-twitter"></i> X
+                </a>
+                <a href="https://instagram.com" target="_blank" class="social-link">
+                    <i class="fa-brands fa-instagram"></i> Instagram
+                </a>
+                <a href="https://tiktok.com" target="_blank" class="social-link">
+                    <i class="fa-brands fa-tiktok"></i> TikTok
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

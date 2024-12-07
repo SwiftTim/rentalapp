@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Rental App</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #322d2d;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        /* Main Section Styling */
+        .main-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .services-title {
+            text-align: center;
+            font-size: 28px;
+            color: #090909;
+            margin-bottom: 20px;
+        }
+
+        .service-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .service-item {
+            background-color: #e9ecef;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            width: 48%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-item h3 {
+            color: #3775cb;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .service-item p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #2e2525;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header style="display: flex; align-items: center; justify-content: space-between; background-color: #2e1a19; color: white; padding: 15px 20px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+        <a href="{% url 'homepage' %}" style="text-decoration: none; color: white; font-size: 40px; font-weight: bold;">
+            Rental App
+        </a>
+        
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="main-container" style="max-width: 1200px; margin: 40px auto; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+
+        <h2 class="services-title">Our Services</h2>
+
+        <!-- Services List -->
+        <div class="service-list">
+            <div class="service-item">
+                <h3>Property Listings</h3>
+                <p>We offer a wide range of properties for rent, including apartments, houses, and commercial spaces. Our listings are updated regularly to give you the best selection in the Kenyan rental market.</p>
+            </div>
+
+            <div class="service-item">
+                <h3>Property Management</h3>
+                <p>We provide property management services for property owners. Our experienced team ensures your property is well-maintained, and all tenant issues are handled promptly and professionally.</p>
+            </div>
+
+            <div class="service-item">
+                <h3>Rent Payment Solutions</h3>
+                <p>We simplify the rental payment process with convenient and secure online payment methods. Whether you are a tenant or a landlord, our platform ensures timely payments with minimal hassle.</p>
+            </div>
+
+            <div class="service-item">
+                <h3>Tenant Placement</h3>
+                <p>We help property owners find trustworthy tenants. Our tenant screening process ensures only the most reliable renters are placed in your property, minimizing risks and ensuring a steady income stream.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Rental App | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

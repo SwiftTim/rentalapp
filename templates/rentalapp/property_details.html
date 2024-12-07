@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ property.title }}</title>
+    <link rel="stylesheet" href="{% static 'rentalapp/css/style.css' %}">
+</head>
+<body>
+     <header style="display: flex; align-items: center; justify-content: space-between; background-color: #2e1a19; color: white; padding: 15px 20px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+        <!-- Left-Aligned Rental App Link -->
+        <a href="{% url 'homepage' %}" style="text-decoration: none; color: white; font-size: 20px; font-weight: bold;">
+            Rental App
+        </a>
+    </header>
+     <div style="display: flex; justify-content: center; align-items: center; height: calc(100vh - 60px);">
+        <div style="text-align: center; background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 100%; max-width: 400px;">
+    <main>
+        <img src="{{ property.image.url }}" alt="{{ property.title }}" style="width:400px;">
+        <p>{{ property.description }}</p>
+        <p>Price: Ksh{{ property.price }}</p>
+        <p>Location: {{ property.location }}</p>
+        <a href="{% url 'book_property' property.id %}">Book this Property</a>
+
+    </main>
+            </div>
+     </div>
+<footer style="background-color: #2e2525; color: white; text-align: center; padding: 30px;">
+        &copy; 2024 Rental App. All rights reserved.
+    </footer>
+</body>
+</html>

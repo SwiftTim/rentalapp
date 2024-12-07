@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Properties</title>
+    <link rel="stylesheet" href="{% static 'rentalapp/css/style.css' %}">
+</head>
+<body>
+    <header class="header">
+        <a href="{% url 'homepage' %}" style="text-decoration: none; color: white; font-size: 40px; font-weight: bold;">
+            Rental App
+        </a>
+        <div style="text-align: center;">
+        <h1 style="font-size: 32px; color: #ffffff; margin-bottom: 10px;">Available Properties</h1>
+        <p style="font-size: 18px; color: #555;">Browse through our wide selection of rental properties.</p>
+    </div>
+    </header>
+
+    <main class="properties-page">
+        <!-- Properties Section -->
+        <section class="properties-list">
+            {% for property in properties %}
+                <div class="property-card2">
+                    <img src="{{ property.image.url }}" alt="{{ property.title }}">
+                    <h3>{{ property.title }}</h3>
+                    <p>Location: {{ property.location }}</p>
+                    <p>Price: Ksh{{ property.price }}/month</p>
+                    <!-- Link to property detail page -->
+                    <a href="{% url 'property_detail' property.id %}">
+                        <button class="details-btn">View Details</button>
+                    </a>
+                </div>
+            {% endfor %}
+        </section>
+    </main>
+
+    <footer style="background-color: #2e2525; color: white; text-align: center; padding: 30px;">
+        &copy; 2024 Rental App. All rights reserved.
+    </footer>
+</body>
+</html>

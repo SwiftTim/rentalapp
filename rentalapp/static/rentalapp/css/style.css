@@ -1,0 +1,527 @@
+/* rentalapp/static/rentalapp/css/style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1.heartbeatSlow {
+    font-size: 2em;
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section Styling */
+.hero-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #3498db;
+    color: #fff;
+}
+
+.hero-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.search-box {
+    padding: 10px;
+    width: 300px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-btn {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Featured Properties Styling */
+.featured-properties {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.featured-properties h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.properties-page {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.property-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.property-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    width: 30%;
+}
+
+.property-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.property-card h3 {
+    margin: 15px 0;
+    font-size: 1.5em;
+}
+
+.property-card p {
+    font-size: 1.2em;
+}
+.properties-list {
+    display: flex;
+    gap: 20px; /* Spacing between cards */
+    overflow-x: auto; /* Enable horizontal scrolling if cards overflow */
+    padding-bottom: 10px; /* Add spacing for scrollbar */
+}
+
+.properties-list::-webkit-scrollbar {
+    height: 8px; /* Customize scrollbar height */
+}
+
+.properties-list::-webkit-scrollbar-thumb {
+    background-color: #007bff; /* Scrollbar color */
+    border-radius: 4px; /* Rounded corners for scrollbar */
+}
+
+.properties-list::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Scrollbar track color */
+}
+.property-card2{
+   background-color: white;
+    border-radius: 8px;/*
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 0 0 300px; /* Set fixed width for each card */
+}
+
+.details-btn {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.details-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.social-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-links i {
+    margin-right: 5px;
+}
+
+.social-links a:hover {
+    color: #3498db;
+}
+.main-section {
+    background-image: url("/rentalapp/images/declan-sun-MDBgnzrj7uE-unsplash (1).jpg");
+    background-size: cover; /* Ensure the background image covers the entire section */
+    background-position: center center; /* Center the background image */
+    background-attachment: fixed; /* Optional: Keeps the image fixed when scrolling */
+    color: #566f81; /* Text color, for readability */
+    padding: 50px 20px; /* Add some padding to the section */
+}
+.ma{
+    background-image: url("/rentalapp/images/declan-sun-MDBgnzrj7uE-unsplash (1).jpg");
+}
+.property-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header styles */
+.header {
+    width: 100%;
+    background-color: #0044cc;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-title {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #0055ee;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.header-link:hover {
+    background-color: #003399;
+}
+
+/* Main content styles */
+.main {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styles */
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+    color: #555;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #0044cc;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 68, 204, 0.3);
+}
+
+/* Button styles */
+.form-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0044cc;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #003399;
+}
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif; /* Replace this with the "Modern Suites" font if available */
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Rental App Header */
+.rentalapp-header {
+    display: flex;
+    align-items: center;
+    background-color: #0044cc;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.rentalapp-link {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: 'Modern Suites', Arial, sans-serif; /* Replace with Modern Suites font */
+}
+
+.rentalapp-link:hover {
+    color: #e0e0e0;
+}
+
+/* Main Content Styling */
+.property-details-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.property-title {
+    font-size: 28px;
+    color: #0044cc;
+    margin-bottom: 10px;
+    font-family: 'Modern Suites', Arial, sans-serif; /* Replace with Modern Suites font */
+}
+
+.back-to-listings-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #0044cc;
+    text-decoration: none;
+    background-color: #f0f0f0;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-listings-link:hover {
+    background-color: #ddd;
+}
+
+/* Property Information */
+.property-info {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.property-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.property-description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.property-price,
+.property-location {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Book Property Link */
+.book-property-link {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #28a745;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-property-link:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0044cc;
+    padding: 15px 20px;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-left .header-link {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.header-left .header-link:hover {
+    color: #d0d0d0;
+}
+
+.header-right .header-text {
+    font-size: 18px;
+    font-weight: lighter;
+    color: white;
+}
+
+/* Main Content */
+.property-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.property-title {
+    font-size: 28px;
+    color: #0044cc;
+    margin-bottom: 10px;
+}
+
+.property-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.property-description,
+.property-price,
+.property-location {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.book-property {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #28a745;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-property:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+html {
+    scroll-behavior: smooth;
+}
